@@ -70,6 +70,9 @@ public class Main {
                 output = new Converter().convertToArabic(string);
             }
         }
+        if (output == null) {
+            throw new Exception("Неверный формат входных данных");
+        }
         return (output);
     }
 }
