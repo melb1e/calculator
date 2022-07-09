@@ -1,0 +1,1 @@
+This is a simple calculator built on Java. It accept integers (Arabic OR Roman).
