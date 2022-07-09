@@ -62,28 +62,46 @@ class Converter {
         }
         return (output.toString());
     }
-
+// I + III + XXL
     public Integer convertToArabic(String toConvert) throws Exception {
         int output = 0;
 
         char[] string = toConvert.toCharArray();
-        if (string.length == 2) {
+        if (string.length == 3) {
+            int num1 = getKey(string[0]);
+            int num2 = getKey(string[1]);
+            int num3 = getKey(string[2]);
+            if (num3 > num2) {
+                output = num3 - num2 - num1;
+            }
+			else {
+                output = num1 + num2 + num3;
+            }
+        }
+        else if (string.length == 2) {
             int num1 = getKey(string[0]);
             int num2 = getKey(string[1]);
             if (num1 > num2) {
-                output = output + num1 + num2;
+                output = num1 + num2;
             } 
 			else if (num1 < num2) {
-				output = output + num2 - num1;
+				output = num2 - num1;
 			}
 			else {
-                output += num1;
+                output = num1 + num2;
             }
+        }
+        else if (string.length == 1) {
+            int num = getKey(string[0]);
+            output = num;
+        }
+        if (output != 0) {
+            return (output);
         }
 		else {
 			throw new Exception("Калькулятор принимает числа от 1 до 10 включительно");
 		}
-        return (output);
+        // return (output);
     }
 
     private Integer getKey(Character num) {
