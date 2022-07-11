@@ -102,6 +102,21 @@ class Converter {
 			int num = getKey(string[0]);
 			output = num;
 		}
+		else if (string.length == 4) {
+			int num1 = getKey(string[0]);
+			int num2 = getKey(string[1]);
+			int num3 = getKey(string[2]);
+			int num4 = getKey(string[3]);
+			if (num4 > num3) {
+				output = num4 - num3 - num2 - num1;
+			}
+			else {
+				output = num1 + num2 + num3 + num4;
+			}
+		}
+		else {
+			throw new Exception("Неверный формат строки");
+		}
 		if (output != 0) {
 			return (output);
 		}
