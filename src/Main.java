@@ -31,7 +31,7 @@ public class Main {
 			throw new Exception("Калькулятор принимает числа от 1 до 10 включительно");
 		}
 		else if (converter.roman(inputs[0]) ^ converter.roman(inputs[2])) {
-			throw new Exception("Нельзя использовать римские и арабские числа одновременно");
+			throw new Exception("Используются одновременно разные системы счисления");
 		}
 		else if (converter.roman(inputs[0]) || converter.roman(inputs[2])) {
 			if (inputs[1].equals("-") && (num1 < num2)) {
