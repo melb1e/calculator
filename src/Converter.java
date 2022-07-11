@@ -10,12 +10,11 @@ class Converter {
 			put(10, 'X');
 			put(50, 'L');
 			put(100, 'C');
-			put(500, 'D');
 		}
 	};
 
 	public boolean roman(String string) {
-		return string.matches("[IVXLCD]+");
+		return string.matches("[IVXLC]+");
 	}
 
 	public String convertToRoman(int number) throws Exception {
