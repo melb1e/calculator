@@ -62,7 +62,6 @@ class Converter {
 		}
 		return (output.toString());
 	}
-
 	public Integer convertToArabic(String toConvert) throws Exception {
 		int output = 0;
 
@@ -102,7 +101,6 @@ class Converter {
 			throw new Exception("Калькулятор принимает числа от 1 до 10 включительно");
 		}
 	}
-
 	private Integer getKey(Character num) {
 		Set<Map.Entry<Integer, Character>> set = tableview.entrySet();
 
